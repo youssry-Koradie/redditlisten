@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RedditListen - Monitor Your Brand on Reddit</title>
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+        
+
+        body {
+
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+            line-height: 1.6;
+
+            color: #333;
+
+        }
+
+        
+
+        .container {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 0 20px;
+
+        }
+
+        
+
+        /* HERO */
+
+        .hero {
+
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+            color: white;
+
+            padding: 100px 20px;
+
+            text-align: center;
+
+        }
+
+        
+
+        .hero h1 {
+
+            font-size: 48px;
+
+            margin-bottom: 20px;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .hero p {
+
+            font-size: 20px;
+
+            margin-bottom: 30px;
+
+            opacity: 0.95;
+
+        }
+
+        
+
+        .cta-button {
+
+            background: white;
+
+            color: #667eea;
+
+            padding: 15px 40px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: transform 0.3s, box-shadow 0.3s;
+
+        }
+
+        
+
+        .cta-button:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+        }
+
+        
+
+        /* PROBLEM SECTION */
+
+        .problem {
+
+            padding: 80px 20px;
+
+            background: #f8f9fa;
+
+        }
+
+        
+
+        .problem h2 {
+
+            font-size: 36px;
+
+            margin-bottom: 20px;
+
+            color: #222;
+
+        }
+
+        
+
+        .problem-text {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: #555;
+
+            margin-bottom: 30px;
+
+        }
+
+        
+
+        .problem ul {
+
+            list-style: none;
+
+            margin: 20px 0;
+
+        }
+
+        
+
+        .problem li {
+
+            padding: 10px 0;
+
+            padding-left: 30px;
+
+            position: relative;
+
+        }
+
+        
+
+        .problem li:before {
+
+            content: "⚠️";
+
+            position: absolute;
+
+            left: 0;
+
+        }
+
+        
+
+        /* SOLUTION SECTION */
+
+        .solution {
+
+            padding: 80px 20px;
+
+            background: white;
+
+        }
+
+        
+
+        .solution h2 {
+
+            font-size: 36px;
+
+            margin-bottom: 50px;
+
+            text-align: center;
+
+            color: #222;
+
+        }
+
+        
+
+        .features {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 40px;
+
+            margin-bottom: 50px;
+
+        }
+
+        
+
+        .feature {
+
+            text-align: center;
+
+        }
+
+        
+
+        .feature-icon {
+
+            font-size: 48px;
+
+            margin-bottom: 15px;
+
+        }
+
+        
+
+        .feature h3 {
+
+            font-size: 20px;
+
+            margin-bottom: 10px;
+
+            color: #222;
+
+        }
+
+        
+
+        .feature p {
+
+            color: #666;
+
+            line-height: 1.6;
+
+        }
+
+        
+
+        /* PRICING */
+
+        .pricing {
+
+            padding: 80px 20px;
+
+            background: #f8f9fa;
+
+        }
+
+        
+
+        .pricing h2 {
+
+            font-size: 36px;
+
+            margin-bottom: 50px;
+
+            text-align: center;
+
+            color: #222;
+
+        }
+
+        
+
+        .pricing-cards {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            gap: 30px;
+
+            margin-bottom: 50px;
+
+        }
+
+        
+
+        .pricing-card {
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 10px;
+
+            border: 2px solid #eee;
+
+            text-align: center;
+
+            transition: transform 0.3s, box-shadow 0.3s;
+
+        }
+
+        
+
+        .pricing-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+
+            border-color: #667eea;
+
+        }
+
+        
+
+        .pricing-card h3 {
+
+            font-size: 24px;
+
+            margin-bottom: 10px;
+
+            color: #222;
+
+        }
+
+        
+
+        .price {
+
+            font-size: 48px;
+
+            font-weight: 700;
+
+            color: #667eea;
+
+            margin: 20px 0;
+
+        }
+
+        
+
+        .price-period {
+
+            color: #999;
+
+            font-size: 14px;
+
+        }
+
+        
+
+        .features-list {
+
+            list-style: none;
+
+            margin: 30px 0;
+
+            text-align: left;
+
+        }
+
+        
+
+        .features-list li {
+
+            padding: 12px 0;
+
+            border-bottom: 1px solid #eee;
+
+            color: #666;
+
+        }
+
+        
+
+        .features-list li:before {
+
+            content: "✓";
+
+            color: #667eea;
+
+            font-weight: bold;
+
+            margin-right: 10px;
+
+        }
+
+        
+
+        /* CTA SECTION */
+
+        .cta-section {
+
+            padding: 80px 20px;
+
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+        
+
+        .cta-section h2 {
+
+            font-size: 36px;
+
+            margin-bottom: 20px;
+
+        }
+
+        
+
+        .cta-section p {
+
+            font-size: 18px;
+
+            margin-bottom: 30px;
+
+            opacity: 0.95;
+
+        }
+
+        
+
+        /* FAQ */
+
+        .faq {
+
+            padding: 80px 20px;
+
+            background: #f8f9fa;
+
+        }
+
+        
+
+        .faq h2 {
+
+            font-size: 36px;
+
+            margin-bottom: 50px;
+
+            text-align: center;
+
+            color: #222;
+
+        }
+
+        
+
+        .faq-item {
+
+            background: white;
+
+            padding: 25px;
+
+            margin-bottom: 15px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            border-left: 4px solid #667eea;
+
+        }
+
+        
+
+        .faq-item h3 {
+
+            color: #222;
+
+            margin-bottom: 10px;
+
+        }
+
+        
+
+        .faq-item p {
+
+            color: #666;
+
+            line-height: 1.8;
+
+        }
+
+        
+
+        /* FOOTER */
+
+        footer {
+
+            background: #222;
+
+            color: white;
+
+            padding: 40px 20px;
+
+            text-align: center;
+
+        }
+
+        
+
+        footer p {
+
+            opacity: 0.7;
+
+        }
+
+        
+
+        .email-form {
+
+            margin: 30px 0;
+
+            display: flex;
+
+            gap: 10px;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+        }
+
+        
+
+        .email-form input {
+
+            padding: 12px 20px;
+
+            border: none;
+
+            border-radius: 6px;
+
+            font-size: 16px;
+
+            min-width: 250px;
+
+        }
+
+        
+
+        .email-form button {
+
+            padding: 12px 40px;
+
+            background: #667eea;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 6px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+        }
+
+        
+
+        .email-form button:hover {
+
+            background: #764ba2;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <h1>Stop Missing What Customers Say on Reddit</h1>
+
+            <p>Real-time monitoring, sentiment analysis, and alerts for your brand on Reddit</p>
+
+            <form class="email-form" id="emailForm">
+
+                <input type="email" placeholder="Your email" required>
+
+                <button type="submit">Start Free Trial</button>
+
+            </form>
+
+            <p style="font-size: 14px; margin-top: 15px; opacity: 0.8;">✓ No credit card required. 14-day free trial.</p>
+
+        </div>
+
+    </section>
+
+    
+
+    <!-- PROBLEM SECTION -->
+
+    <section class="problem">
+
+        <div class="container">
+
+            <h2>Your Customers Are Discussing You on Reddit</h2>
+
+            <p class="problem-text">And you have no idea what they're saying.</p>
+
+            
+
+            <ul>
+
+                <li>Customers complain about bugs in r/startups before contacting support</li>
+
+                <li>Competitors get discussed in your niche communities daily</li>
+
+                <li>Sentiment about your product changes overnight on Reddit</li>
+
+                <li>By the time a post goes viral, it's too late to respond</li>
+
+            </ul>
+
+            
+
+            <p class="problem-text" style="margin-top: 30px;">Most teams discover these conversations on Twitter—days later. Too late to do anything about it.</p>
+
+        </div>
+
+    </section>
+
+    
+
+    <!-- SOLUTION SECTION -->
+
+    <section class="solution">
+
+        <div class="container">
+
+            <h2>RedditListen Fixes This</h2>
+
+            
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <div class="feature-icon">📊</div>
+
+                    <h3>Real-Time Monitoring</h3>
+
+                    <p>Monitor 150,000+ subreddits. Catch mentions the moment they happen.</p>
+
+                </div>
+
+                
+
+                <div class="feature">
+
+                    <div class="feature-icon">😊</div>
+
+                    <h3>Sentiment Analysis</h3>
+
+                    <p>Know if people are praising or criticizing your brand. Instantly.</p>
+
+                </div>
+
+                
+
+                <div class="feature">
+
+                    <div class="feature-icon">🔔</div>
+
+                    <h3>Smart Alerts</h3>
+
+                    <p>Get notified when sentiment spikes or discussions trend. Via email or Slack.</p>
+
+                </div>
+
+                
+
+                <div class="feature">
+
+                    <div class="feature-icon">📈</div>
+
+                    <h3>Actionable Insights</h3>
+
+                    <p>See what issues matter most. Respond before they blow up.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+    <!-- PRICING SECTION -->
+
+    <section class="pricing">
+
+        <div class="container">
+
+            <h2>Plans for Every Team</h2>
+
+            
+
+            <div class="pricing-cards">
+
+                <!-- STARTER -->
+
+                <div class="pricing-card">
+
+                    <h3>Starter</h3>
+
+                    <div class="price">$149<span class="price-period">/month</span></div>
+
+                    <p>Perfect for testing</p>
+
+                    
+
+                    <ul class="features-list">
+
+                        <li>Monitor 1 brand</li>
+
+                        <li>Track 100 subreddits</li>
+
+                        <li>Daily digest</li>
+
+                        <li>2 alerts/day</li>
+
+                        <li>Email support</li>
+
+                    </ul>
+
+                    
+
+                    <button class="cta-button" onclick="signupTrial('starter')">Start Free Trial</button>
+
+                </div>
+
+                
+
+                <!-- GROWTH (POPULAR) -->
+
+                <div class="pricing-card" style="border: 2px solid #667eea; position: relative;">
+
+                    <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #667eea; color: white; padding: 4px 16px; border-radius: 20px; font-size: 12px; font-weight: 600;">MOST POPULAR</div>
+
+                    <h3>Growth</h3>
+
+                    <div class="price">$349<span class="price-period">/month</span></div>
+
+                    <p>Best for growing teams</p>
+
+                    
+
+                    <ul class="features-list">
+
+                        <li>Monitor 15 brands</li>
+
+                        <li>Track 500 subreddits</li>
+
+                        <li>Competitor tracking (3)</li>
+
+                        <li>Unlimited alerts</li>
+
+                        <li>Slack integration</li>
+
+                        <li>Priority support</li>
+
+                    </ul>
+
+                    
+
+                    <button class="cta-button" onclick="signupTrial('growth')" style="background: #667eea; color: white;">Start Free Trial</button>
+
+                </div>
+
+                
+
+                <!-- ENTERPRISE -->
+
+                <div class="pricing-card">
+
+                    <h3>Enterprise</h3>
+
+                    <div class="price">$999<span class="price-period">/month</span></div>
+
+                    <p>For large organizations</p>
+
+                    
+
+                    <ul class="features-list">
+
+                        <li>Unlimited brands</li>
+
+                        <li>Unlimited subreddits</li>
+
+                        <li>Unlimited competitors</li>
+
+                        <li>API access</li>
+
+                        <li>Custom integrations</li>
+
+                        <li>Dedicated support</li>
+
+                    </ul>
+
+                    
+
+                    <button class="cta-button" onclick="signupTrial('enterprise')">Start Free Trial</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+    <!-- CTA SECTION -->
+
+    <section class="cta-section">
+
+        <div class="container">
+
+            <h2>Ready to Stop Missing Critical Conversations?</h2>
+
+            <p>Get real-time visibility into what matters. Start your 14-day free trial today.</p>
+
+            <form class="email-form" id="emailForm2">
+
+                <input type="email" placeholder="Your email" required>
+
+                <button type="submit">Get Started Now</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    
+
+    <!-- FAQ SECTION -->
+
+    <section class="faq">
+
+        <div class="container">
+
+            <h2>Frequently Asked Questions</h2>
+
+            
+
+            <div class="faq-item">
+
+                <h3>How quickly will I see results?</h3>
+
+                <p>Mentions start appearing within minutes of setup. Most customers find relevant discussions within 24-48 hours of launching.</p>
+
+            </div>
+
+            
+
+            <div class="faq-item">
+
+                <h3>Can I monitor multiple brands?</h3>
+
+                <p>Yes! Starter monitors 1 brand, Growth monitors 15, and Enterprise is unlimited.</p>
+
+            </div>
+
+            
+
+            <div class="faq-item">
+
+                <h3>What if Reddit changes their API?</h3>
+
+                <p>We monitor Reddit directly, so API changes don't affect service. Your data stays live.</p>
+
+            </div>
+
+            
+
+            <div class="faq-item">
+
+                <h3>Can I export the data?</h3>
+
+                <p>Enterprise customers get API access and historical data export. Starter/Growth get downloadable reports.</p>
+
+            </div>
+
+            
+
+            <div class="faq-item">
+
+                <h3>What if I'm not happy?</h3>
+
+                <p>Cancel anytime. No setup fees, no contracts, no questions asked. But we're confident you'll love it.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>&copy; 2025 RedditListen. Monitor your brand on Reddit.</p>
+
+            <p style="font-size: 12px; margin-top: 10px;">
+
+                <a href="#" style="color: white;">Privacy</a> • 
+
+                <a href="#" style="color: white;">Terms</a> • 
+
+                <a href="#" style="color: white;">Contact</a>
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    
+
+    <script>
+
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+
+            e.preventDefault();
+
+            const email = this.querySelector('input[type="email"]').value;
+
+            // Send to your Mailchimp/email list
+
+            alert('Thank you! Check your email for your free trial link.');
+
+        });
+
+        
+
+        document.getElementById('emailForm2').addEventListener('submit', function(e) {
+
+            e.preventDefault();
+
+            const email = this.querySelector('input[type="email"]').value;
+
+            alert('Thank you! Check your email for your free trial link.');
+
+        });
+
+        
+
+        function signupTrial(plan) {
+
+            alert('Redirecting to free trial signup for ' + plan + ' plan...');
+
+        }
+
+    </script>
+
+</body>
+
+</html>
