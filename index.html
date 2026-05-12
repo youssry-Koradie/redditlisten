@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -211,55 +210,10 @@
             opacity: 0.95;
         }
         
-        /* MAILCHIMP FORM STYLES */
-        #mc_embed_signup {
-            background: white;
-            clear: left;
-            font: 14px Helvetica, Arial, sans-serif;
+        /* BREVO FORM STYLES */
+        .brevo-form-container {
             max-width: 600px;
             margin: 0 auto;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        
-        #mc_embed_signup form {
-            padding: 0;
-        }
-        
-        .mc-field-group {
-            margin-bottom: 15px;
-        }
-        
-        #mce-EMAIL {
-            width: 100%;
-            padding: 12px 20px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-family: inherit;
-        }
-        
-        #mce-EMAIL:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
-        }
-        
-        #mc-embedded-subscribe {
-            background: #667eea;
-            color: white;
-            padding: 12px 40px;
-            font-size: 16px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            width: 100%;
-            transition: background 0.3s;
-        }
-        
-        #mc-embedded-subscribe:hover {
-            background: #764ba2;
         }
         
         /* FAQ */
@@ -424,40 +378,16 @@
         </div>
     </section>
     
-    <!-- CTA SECTION WITH MAILCHIMP FORM -->
+    <!-- CTA SECTION WITH BREVO FORM -->
     <section class="cta-section">
         <div class="container">
             <h2>Ready to Stop Missing Critical Conversations?</h2>
             <p>Get real-time visibility into what matters. Start your 14-day free trial today.</p>
             
-            <!-- BEGIN MAILCHIMP SIGNUP FORM - EXACT CODE FROM MAILCHIMP -->
-            <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-            <style type="text/css">
-                #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
-            </style>
-            <div id="mc_embed_signup">
-                <form action="https://gmail.us20.list-manage.com/subscribe/post?u=54af0fdb2f1852fe1a744b7ca&amp;id=00fca50ebd&amp;f_id=00b90ae0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                    <div id="mc_embed_signup_scroll">
-                        <div class="mc-field-group">
-                            <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
-                            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" placeholder="Enter your email">
-                        </div>
-                        <div id="mce-responses" class="clear foot">
-                            <div class="response" id="mce-error-response" style="display: none;"></div>
-                            <div class="response" id="mce-success-response" style="display: none;"></div>
-                        </div>
-                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                            <input type="text" name="b_54af0fdb2f1852fe1a744b7ca_00fca50ebd" tabindex="-1" value="">
-                        </div>
-                        <div class="optionalParent">
-                            <div class="clear foot">
-                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Start Free Trial">
-                            </div>
-                        </div>
-                    </div>
-                </form>
+            <!-- BREVO FORM - EMBEDDED -->
+            <div class="brevo-form-container">
+                <iframe src="https://cfe187c6.sibforms.com/serve/MUIFAJUJYQPSihgpLvMY13ouK1taMsoCEjCFuOILspNZbTPL0gGITGRr4WeAq1YHXukGJvPYWeXRd6eLausBDpAK4iMfsI43EYKAVMnfhw2X4SxrmvEe5MzUlcLkfb9JUMn-2U-I6MwAalpQUhbmcnZTofLjwgRhea-iDJuEUser7qV5mtPYNyFfla3UgA6QG_Lev2Wm_YjHxXTlHA==" frameborder="0" scrolling="auto" width="100%" height="500" style="display: block;margin: 0 auto;max-width: 100%;"></iframe>
             </div>
-            <!-- END MAILCHIMP SIGNUP FORM -->
             
             <p style="font-size: 14px; margin-top: 15px; opacity: 0.8;">✓ No credit card required. Cancel anytime.</p>
         </div>
@@ -506,8 +436,5 @@
             </p>
         </div>
     </footer>
-
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));</script>
 </body>
 </html>
